@@ -10,11 +10,18 @@ export default function Login() {
   const router = useRouter();
   const [startedRouterPush, setStartedRouterPush] = useState(false);
 
-  const handleGithubLogin = async (e) => {
-    e.preventDefault();
-    setSigning(true);
-    await signIn('github');
-  };
+  // const handleGithubLogin = async (e) => {
+  //   e.preventDefault();
+  //   setSigning(true);
+  //   await signIn('github');
+  // };
+
+  const handleGoogleLogin = async (e) => {
+      e.preventDefault();
+      setSigning(true);
+      await signIn('google');
+    };
+
 
   useEffect(() => {
     if (session && !loading) {
@@ -43,12 +50,12 @@ export default function Login() {
                 <div className="text-center">
                   <button
                     className="mt-8 mb-4 p-4 flex justify-center items-center border rounded hover:bg-gray-50"
-                    onClick={handleGithubLogin}>
+                    onClick={handleGoogleLogin}>
                     <picture>
-                      <img className="mr-4 w-6" src="/github.svg" alt="" />
+                      <img className="mr-4 w-6" src="/google.svg" alt="" />
                     </picture>
                     <span className="text-xs text-gray-500 font-bold">
-                      {!signing && 'Sign In with your GitHub'}
+                      {!signing && 'Sign In with Google'}
                       {signing && 'Signing in ...'}
                     </span>
                   </button>
