@@ -1,9 +1,8 @@
-# Tinder APP
+# COT APP
 
 ## General info
 
-The project created using the latest libraries to learn Next.js well. PostgreSQL database built in
-Docker.
+Cup of Tea initial project using Next.js.
 
 ## Technologies
 
@@ -14,10 +13,6 @@ Docker.
 - Axios 1.4
 - Tailwind CSS 3.3
 - PostgreSQL 15.0
-
-## Website
-
-[Tinder APP - website](https://tinder-nextjs-alpha.vercel.app/)
 
 ## Features
 
